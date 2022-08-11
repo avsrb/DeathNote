@@ -60,8 +60,8 @@ class ViewController: UIViewController {
     }
     
     @objc func addButtonTaped() {
-        let createNewLog = CreateNewLogViewController()
-        navigationController?.pushViewController(createNewLog, animated: true)
+        let addPerson = AddPersonViewController()
+        navigationController?.pushViewController(addPerson, animated: true)
     }
 }
 

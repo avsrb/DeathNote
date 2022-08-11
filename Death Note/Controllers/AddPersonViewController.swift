@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CreateNewLogViewController: UIViewController {
+class AddPersonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "create log"
-        view.backgroundColor = .blue
+        title = "Add a Person"
+        view.backgroundColor = .red
     }
 }
