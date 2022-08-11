@@ -7,10 +7,35 @@
 
 import UIKit
 
+
+//let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterTableViewCell
+//        let theCharacter = allCharacters[indexPath.row]
+//        cell.nameLabel.text = "\(theCharacter.name)"
+//        cell.deathDate.text = "\(theCharacter.date)"
+//        cell.deathDescription.numberOfLines = 0
+//        cell.deathDescription.text = "\(theCharacter.description ?? "")"
+//        return cell
+//    }
+//
+//
+//let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! RecipeTableViewCell
+//
+//        let recipe = categories[indexPath.section].recipes[indexPath.row]
+//
+//        cell.recipeTitleLable.text = recipe.title
+//        cell.recipeIngredientsLabel.text = recipe.ingresients
+//        cell.iconImageView.image = recipe.photo
+//
+//        return cell
+//    }
+
+
 class ViewController: UIViewController {
 
     private let tableView: UITableView = {
         let tableView = UITableView()
+        // убрать отягивание
+        //tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
