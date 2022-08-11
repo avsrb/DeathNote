@@ -56,6 +56,12 @@ class ViewController: UIViewController {
         //Registers a class to use in creating new table cells.
         tableView.register(TableViewCell.self, forCellReuseIdentifier: idCell)
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTaped))
+    }
+    
+    @objc func addButtonTaped() {
+        let createNewLog = CreateNewLogViewController()
+        navigationController?.pushViewController(createNewLog, animated: true)
     }
 }
 
