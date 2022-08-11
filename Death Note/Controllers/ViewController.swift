@@ -7,29 +7,6 @@
 
 import UIKit
 
-
-//let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterTableViewCell
-//        let theCharacter = allCharacters[indexPath.row]
-//        cell.nameLabel.text = "\(theCharacter.name)"
-//        cell.deathDate.text = "\(theCharacter.date)"
-//        cell.deathDescription.numberOfLines = 0
-//        cell.deathDescription.text = "\(theCharacter.description ?? "")"
-//        return cell
-//    }
-//
-//
-//let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! RecipeTableViewCell
-//
-//        let recipe = categories[indexPath.section].recipes[indexPath.row]
-//
-//        cell.recipeTitleLable.text = recipe.title
-//        cell.recipeIngredientsLabel.text = recipe.ingresients
-//        cell.iconImageView.image = recipe.photo
-//
-//        return cell
-//    }
-
-
 class ViewController: UIViewController {
 
     private let tableView: UITableView = {
@@ -41,7 +18,8 @@ class ViewController: UIViewController {
     }()
     
     let idCell = "cell"
-    
+    private(set) var people: [Person] = [Person.init(name: "Hel", date: "sdf", descriptionDead: "fsd")]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +39,7 @@ class ViewController: UIViewController {
     
     @objc func addButtonTaped() {
         let addPerson = AddPersonViewController()
+        addPerson.delegate = self
         navigationController?.pushViewController(addPerson, animated: true)
     }
 }
@@ -69,13 +48,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // кол-во строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        print(people.count)
+        return people.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! TableViewCell
-
+        
+        let person = people[indexPath.row]
+        
+        cell.name.text = person.name
+        cell.date.text = person.date
+        cell.reason.text = person.descriptionDead
+        
         return cell
     }
     
@@ -100,4 +86,13 @@ extension ViewController {
         ])
     }
         
+}
+
+extension ViewController: AddPersonViewControllerDelegate {
+    func savePerson(person: Person) {
+        people.append(person)
+        print(people)
+    }
+    
+    
 }

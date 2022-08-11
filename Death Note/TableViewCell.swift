@@ -6,18 +6,20 @@
 //
 
 import UIKit
-
-class TableViewCell: UITableViewCell {
-    
-    let name = UILabel(text: "Steve Jobs", font: UIFont.systemFont(ofSize: 15))
-    let date = UILabel(text: "October 5, 2011", font: UIFont.systemFont(ofSize: 15), textAlignment: .right)
 //    let dateDead: UIDatePicker = {
 //        let datePicker = UIDatePicker()
 //        datePicker.datePickerMode = .dateAndTime
 //        datePicker.setDate(.now, animated: true)
 //        return datePicker
 //    }()
+
+class TableViewCell: UITableViewCell {
+    
+    let name = UILabel(text: "Steve Jobs", font: UIFont.systemFont(ofSize: 15))
+    let date = UILabel(text: "October 5, 2011", font: UIFont.systemFont(ofSize: 15), textAlignment: .right)
     let reason = UILabel(text: "Cancer", font: UIFont.systemFont(ofSize: 12))
+    
+//    private(set) var people: [Person] = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -59,3 +61,11 @@ class TableViewCell: UITableViewCell {
         ])
     }
 }
+
+//extension ViewController: AddPersonViewControllerDelegate {
+//    func savePerson(person: Person) {
+//       people.append(person)
+//    }
+//
+//
+//}

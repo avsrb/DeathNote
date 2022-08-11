@@ -15,6 +15,7 @@
 		ACBA341E28A3ED95009A81F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA341D28A3ED95009A81F6 /* TableViewController.swift */; };
 		ACBA342028A40BDE009A81F6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */; };
 		ACF179C828A4FCF5009B6C4D /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF179C728A4FCF5009B6C4D /* AddPersonViewController.swift */; };
+		ACF179CC28A54BD1009B6C4D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF179CB28A54BD1009B6C4D /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ACBA341D28A3ED95009A81F6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		ACF179C728A4FCF5009B6C4D /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		ACF179CB28A54BD1009B6C4D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				ACBA341A28A3E79A009A81F6 /* Resources */,
 				ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */,
 				AC77128828A4264A00593630 /* Extention+UILabel.swift */,
+				ACF179CB28A54BD1009B6C4D /* Person.swift */,
 			);
 			path = "Death Note";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				AC77128928A4264A00593630 /* Extention+UILabel.swift in Sources */,
 				ACF179C828A4FCF5009B6C4D /* AddPersonViewController.swift in Sources */,
 				ACBA342028A40BDE009A81F6 /* TableViewCell.swift in Sources */,
+				ACF179CC28A54BD1009B6C4D /* Person.swift in Sources */,
 				ACBA341E28A3ED95009A81F6 /* TableViewController.swift in Sources */,
 				ACBA340728A3E403009A81F6 /* AppDelegate.swift in Sources */,
 			);
