@@ -76,14 +76,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! TableViewCell
 
-        switch indexPath.row {
-        case 0:
-            cell.backgroundColor = .red
-        case 1:
-            cell.backgroundColor = .green
-        default:
-            cell.backgroundColor = .blue
-        }
         return cell
     }
     
@@ -105,7 +97,6 @@ extension ViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-        
         ])
     }
         

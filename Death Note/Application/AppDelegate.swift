@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let rootVC = ViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
+        navVC.navigationBar.tintColor = .white
+        navVC.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        navVC.navigationBar.barTintColor = .white
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         

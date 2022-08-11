@@ -11,7 +11,12 @@ class TableViewCell: UITableViewCell {
     
     let name = UILabel(text: "Steve Jobs", font: UIFont.systemFont(ofSize: 15))
     let date = UILabel(text: "October 5, 2011", font: UIFont.systemFont(ofSize: 15), textAlignment: .right)
-//    let dateDead = UIDatePicker()
+//    let dateDead: UIDatePicker = {
+//        let datePicker = UIDatePicker()
+//        datePicker.datePickerMode = .dateAndTime
+//        datePicker.setDate(.now, animated: true)
+//        return datePicker
+//    }()
     let reason = UILabel(text: "Cancer", font: UIFont.systemFont(ofSize: 12))
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
