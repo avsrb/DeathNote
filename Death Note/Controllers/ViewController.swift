@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         // убрать отягивание
         //tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 100.0
         return tableView
     }()
     
@@ -49,6 +51,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return people.count
     }
     
+//    func cofigure(with row: Person) {
+//        name.text = person.name
+//        date.text = person.date
+//        reason.text = person.descriptionDead
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! TableViewCell
         let person = people[indexPath.row]
@@ -67,9 +75,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        100
+//    }
 }
 
 extension ViewController {

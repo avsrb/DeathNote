@@ -14,9 +14,9 @@ struct Person {
     
     static var createExample: [Person] {
         return [
-                Person(name: "Ekaterina Ivanov", date: Date("13/08/22 21:00").toString(), descriptionDead: "Car accident"),
+                Person(name: "Ekaterina Ivanov", date: Date("13/08/23 21:00").toString(), descriptionDead: "Car accident"),
                 Person(name: "Stepan Pupkin", date: Date("24/12/24 21:00").toString(), descriptionDead: "old"),
-                Person(name: "Ivan Ivanov", date: Date("13/08/22 21:00").toString(), descriptionDead: "Car accident")
+                Person(name: "Ivan Ivanov", date: Date("13/08/23 21:00").toString(), descriptionDead: "Car accident")
         ]
     }
 }
