@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }()
     
     let idCell = "cell"
-    var people: [Person] = [Person(name: "First", date: "01-01-1971", descriptionDead: "killed")]
+    var people: [Person] = Person.createExample
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,16 +58,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.date.text = person.date
         cell.reason.text = person.descriptionDead
         
-        DispatchQueue.main.async {
-            tableView.reloadData()
-        }
-        
+//      DispatchQueue.main.async {
+//          self.tableView.reloadData()
+//       }
         return cell
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+    
     
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        90

@@ -93,7 +93,7 @@ class AddPersonViewController: UIViewController {
     
 
     @objc func buttonDonePressed() {
-        let person = Person(name: nameTextField.text!, date: "0000", descriptionDead: descriptionTextField.text!)
+        let person = Person(name: nameTextField.text!, date: datePicker.date.toString(), descriptionDead: descriptionTextField.text!)
         
         delegate?.savePerson(person: person)
         navigationController?.popViewController(animated: true)
@@ -104,6 +104,7 @@ class AddPersonViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.centerYAnchor)
         ])
         
     }

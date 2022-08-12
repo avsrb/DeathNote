@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC77128928A4264A00593630 /* Extention+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77128828A4264A00593630 /* Extention+UILabel.swift */; };
+		ACABFE5E28A6646B0011653E /* Extention+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACABFE5D28A6646B0011653E /* Extention+Date.swift */; };
 		ACBA340728A3E403009A81F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA340628A3E403009A81F6 /* AppDelegate.swift */; };
 		ACBA340B28A3E403009A81F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA340A28A3E403009A81F6 /* ViewController.swift */; };
 		ACBA341028A3E408009A81F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBA340F28A3E408009A81F6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		AC77128828A4264A00593630 /* Extention+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UILabel.swift"; sourceTree = "<group>"; };
+		ACABFE5D28A6646B0011653E /* Extention+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+Date.swift"; sourceTree = "<group>"; };
 		ACBA340328A3E403009A81F6 /* Death Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBA340628A3E403009A81F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACBA340A28A3E403009A81F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				ACBA341A28A3E79A009A81F6 /* Resources */,
 				ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */,
 				AC77128828A4264A00593630 /* Extention+UILabel.swift */,
+				ACABFE5D28A6646B0011653E /* Extention+Date.swift */,
 				ACF179CB28A54BD1009B6C4D /* Person.swift */,
 			);
 			path = "Death Note";
@@ -176,6 +179,7 @@
 				ACBA342028A40BDE009A81F6 /* TableViewCell.swift in Sources */,
 				ACF179CC28A54BD1009B6C4D /* Person.swift in Sources */,
 				ACBA341E28A3ED95009A81F6 /* TableViewController.swift in Sources */,
+				ACABFE5E28A6646B0011653E /* Extention+Date.swift in Sources */,
 				ACBA340728A3E403009A81F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
