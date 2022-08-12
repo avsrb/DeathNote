@@ -122,5 +122,5 @@ extension AddPersonViewController {
            }
           // show the alert
           self.present(alert, animated: true, completion: nil)
-
+    }
 }
