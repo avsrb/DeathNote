@@ -86,6 +86,8 @@ class AddPersonViewController: UIViewController {
             
             delegate?.savePerson(person: person)
             navigationController?.popViewController(animated: false)
+        } else {
+            showAlert(title: "Who will die?", message: "Write how you want this person to die", firstAction: "I'll do it right now", secondAction: nil)
         }
         
     }
@@ -105,4 +107,20 @@ class AddPersonViewController: UIViewController {
         stackView.addArrangedSubview(datePicker)
         stackView.addArrangedSubview(descriptionTextField)
     }
+}
+
+
+extension AddPersonViewController {
+    func showAlert(title: String, message: String, firstAction: String, secondAction: String?) {
+           // create the alert
+          let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+
+          // add the actions (buttons)
+           alert.addAction(UIAlertAction(title: firstAction, style: UIAlertAction.Style.default, handler: nil))
+           if let secondAction = secondAction {
+               alert.addAction(UIAlertAction(title: secondAction, style: UIAlertAction.Style.cancel, handler: nil))
+           }
+          // show the alert
+          self.present(alert, animated: true, completion: nil)
+
 }
