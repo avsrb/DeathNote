@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         
         setConstrains()
         
-        //Registers a class to use in creating new table cells.
         tableView.register(TableViewCell.self, forCellReuseIdentifier: idCell)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTaped))
@@ -40,7 +39,7 @@ class ViewController: UIViewController {
     @objc func addButtonTaped() {
         let addPerson = AddPersonViewController()
         addPerson.delegate = self
-        navigationController?.pushViewController(addPerson, animated: true)
+        navigationController?.pushViewController(addPerson, animated: false)
     }
 }
 
@@ -71,11 +70,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-    
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        90
-//    }
 }
 
 extension ViewController {
@@ -89,7 +83,6 @@ extension ViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
-        
 }
 
 extension ViewController: AddPersonViewControllerDelegate {

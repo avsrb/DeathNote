@@ -17,14 +17,6 @@ protocol PersonProtocol {
 
 class AddPersonViewController: UIViewController {
 
-//    private lazy var backgroundImage: UIImageView = {
-//            let image = UIImage(named: "paper")
-//            let imageView = UIImageView(image: image)
-//            imageView.translatesAutoresizingMaskIntoConstraints = false
-//            imageView.contentMode = .scaleAspectFill
-//
-//            return imageView
-//        }()
     weak var delegate: AddPersonViewControllerDelegate?
     
     private let nameTextField : UITextField = {
@@ -50,32 +42,28 @@ class AddPersonViewController: UIViewController {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .dateAndTime
         datePicker.translatesAutoresizingMaskIntoConstraints = false
+        datePicker.minimumDate = Date.now
         return datePicker
     }()
     
-    let descriptionTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "This person will die because"
-        textField.textColor = .white
-        textField.tintColor = .white
-        textField.borderStyle = .line
-        textField.textAlignment = .center
-        textField.font = UIFont.systemFont(ofSize: 20)
-        textField.autocorrectionType = .no
-        textField.keyboardType = .default
-        textField.returnKeyType = .done
-        textField.clearButtonMode = UITextField.ViewMode.whileEditing
-        textField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
+    let descriptionTextField: UITextView = {
+        let textView = UITextView()
+        textView.textColor = .white
+        textView.tintColor = .white
+        textView.layer.borderColor = UIColor.white.cgColor
+        textView.layer.borderWidth = 2
+        textView.layer.cornerRadius = 15
+        textView.textAlignment = .center
+        textView.font = UIFont.systemFont(ofSize: 20)
+
+        return textView
     }()
-    
+
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .equalSpacing
         stackView.axis = .vertical
-        stackView.spacing = 10
+        stackView.spacing = 0
         return stackView
     }()
     
@@ -91,22 +79,24 @@ class AddPersonViewController: UIViewController {
         setConstrains()
     }
     
-
     @objc func buttonDonePressed() {
-        let person = Person(name: nameTextField.text!, date: datePicker.date.toString(), descriptionDead: descriptionTextField.text!)
+        if !nameTextField.text!.isEmpty {
+            
+            let person = Person(name: nameTextField.text!, date: datePicker.date.toString(), descriptionDead: descriptionTextField.text!)
+            
+            delegate?.savePerson(person: person)
+            navigationController?.popViewController(animated: false)
+        }
         
-        delegate?.savePerson(person: person)
-        navigationController?.popViewController(animated: true)
     }
     
     func setConstrains() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: view.centerYAnchor)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-        
     }
     
     func setupUI() {
