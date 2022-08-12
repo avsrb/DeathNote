@@ -15,11 +15,18 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    let name = UILabel(text: "Steve Jobs", font: UIFont.systemFont(ofSize: 15))
-    let date = UILabel(text: "October 5, 2011", font: UIFont.systemFont(ofSize: 15), textAlignment: .right)
-    let reason = UILabel(text: "Cancer", font: UIFont.systemFont(ofSize: 12))
+    var name = UILabel(font: UIFont.systemFont(ofSize: 15))
+    var date = UILabel(font: UIFont.systemFont(ofSize: 15), textAlignment: .right)
+    var reason = UILabel(font: UIFont.systemFont(ofSize: 12))
     
-//    private(set) var people: [Person] = []
+//    var person : Person? {
+//        didSet {
+//            name.text = person?.name
+//            date.text = person?.date
+//            reason.text = person?.descriptionDead
+//        }
+//    }
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -61,11 +68,3 @@ class TableViewCell: UITableViewCell {
         ])
     }
 }
-
-//extension ViewController: AddPersonViewControllerDelegate {
-//    func savePerson(person: Person) {
-//       people.append(person)
-//    }
-//
-//
-//}

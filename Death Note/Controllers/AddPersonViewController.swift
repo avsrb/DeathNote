@@ -12,11 +12,16 @@ protocol AddPersonViewControllerDelegate: AnyObject {
 }
 
 protocol PersonProtocol {
-    var person: Person { get }
+    var person: Person { get set }
 }
 
+//protocol ProductCellDelegate {
+//    func increaseNumber(cell: TableViewCell, number : Int)
+//    func decreaseNumber(cell: TableViewCell, number : Int)
+//}
 
-class AddPersonViewController: UIViewController, PersonProtocol {
+
+class AddPersonViewController: UIViewController {
     
 
 //    private lazy var backgroundImage: UIImageView = {
@@ -28,14 +33,6 @@ class AddPersonViewController: UIViewController, PersonProtocol {
 //            return imageView
 //        }()
     weak var delegate: AddPersonViewControllerDelegate?
-
-    var person: Person {
-        Person(name: nameTextField.text!, date: "0000", descriptionDead: descriptionTextField.text!)
-      }
-    //       if !nameTextField.text!.isEmpty {
-//            let newPerson = Person(name: nameTextField.text!, data: "01 10 2010", descriptionDead: descriptionTextField.text!)
-//        }
-
     
     private let nameTextField : UITextField = {
         let textField = UITextField()
@@ -50,7 +47,6 @@ class AddPersonViewController: UIViewController, PersonProtocol {
         textField.clearButtonMode = UITextField.ViewMode.whileEditing
         textField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         textField.translatesAutoresizingMaskIntoConstraints = false
-//        textField.delegate = self
 
         return textField
     }()
@@ -61,7 +57,6 @@ class AddPersonViewController: UIViewController, PersonProtocol {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .dateAndTime
         datePicker.translatesAutoresizingMaskIntoConstraints = false
-//        datePicker.delegate = self()
         return datePicker
     }()
     
@@ -106,11 +101,7 @@ class AddPersonViewController: UIViewController, PersonProtocol {
     
 
     @objc func buttonDonePressed() {
-//        delegate?.savePerson(person: Person.createExample())
-//        let newContactVC = segue.destination as! NewContactViewController
-//                newContactVC.delegate = self
-
-        
+        let person = Person(name: nameTextField.text!, date: "0000", descriptionDead: descriptionTextField.text!)
         
         delegate?.savePerson(person: person)
         navigationController?.popViewController(animated: true)
@@ -134,9 +125,6 @@ class AddPersonViewController: UIViewController, PersonProtocol {
 }
 
 
-//extension AddPersonViewController: AddPersonViewControllerDelegate {
-//    func savePerson(person: Person) {
-//        people.append(person)
-//    }
+//extension AddPersonViewController : PersonProtocol {
 //
 //}

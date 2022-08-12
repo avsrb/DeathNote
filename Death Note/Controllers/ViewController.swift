@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }()
     
     let idCell = "cell"
-    private(set) var people: [Person] = [Person.init(name: "Hel", date: "sdf", descriptionDead: "fsd")]
+    var people: [Person] = [Person(name: "First", date: "01-01-1971", descriptionDead: "killed")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,21 +46,22 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    // кол-во строк в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(people.count)
         return people.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! TableViewCell
-        
         let person = people[indexPath.row]
-        
+ 
         cell.name.text = person.name
         cell.date.text = person.date
         cell.reason.text = person.descriptionDead
+        
+        DispatchQueue.main.async {
+            tableView.reloadData()
+        }
         
         return cell
     }
@@ -93,6 +94,4 @@ extension ViewController: AddPersonViewControllerDelegate {
         people.append(person)
         print(people)
     }
-    
-    
 }
