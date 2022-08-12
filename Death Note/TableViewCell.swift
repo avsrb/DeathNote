@@ -19,15 +19,6 @@ class TableViewCell: UITableViewCell {
     var date = UILabel(font: UIFont.systemFont(ofSize: 15), textAlignment: .right)
     var reason = UILabel(font: UIFont.systemFont(ofSize: 12))
     
-//    var person : Person? {
-//        didSet {
-//            name.text = person?.name
-//            date.text = person?.date
-//            reason.text = person?.descriptionDead
-//        }
-//    }
-    
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

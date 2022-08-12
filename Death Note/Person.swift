@@ -12,8 +12,12 @@ struct Person {
     var date: String
     var descriptionDead: String
     
-    func createExample() -> Person {
-        Person(name: "Steve", date: "01 obercto", descriptionDead: "Cancer")
+    func createExample() -> [Person] {
+        return [
+                    Person(name: "Steve Jobs", date: "01 obercto", descriptionDead: "Cancer"),
+                    Person(name: "Steve Jobs", date: "01 obercto", descriptionDead: "Cancer"),
+                    Person(name: "Steve Jobs", date: "01 obercto", descriptionDead: "Cancer"),
+            ]
     }
 }
 

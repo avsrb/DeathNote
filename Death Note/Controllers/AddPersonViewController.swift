@@ -15,14 +15,7 @@ protocol PersonProtocol {
     var person: Person { get set }
 }
 
-//protocol ProductCellDelegate {
-//    func increaseNumber(cell: TableViewCell, number : Int)
-//    func decreaseNumber(cell: TableViewCell, number : Int)
-//}
-
-
 class AddPersonViewController: UIViewController {
-    
 
 //    private lazy var backgroundImage: UIImageView = {
 //            let image = UIImage(named: "paper")
@@ -88,8 +81,7 @@ class AddPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        
         let buttonDone = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(buttonDonePressed))
         self.navigationItem.rightBarButtonItem = buttonDone
 
@@ -123,8 +115,3 @@ class AddPersonViewController: UIViewController {
         stackView.addArrangedSubview(descriptionTextField)
     }
 }
-
-
-//extension AddPersonViewController : PersonProtocol {
-//
-//}
