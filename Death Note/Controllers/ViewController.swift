@@ -50,7 +50,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return people.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! TableViewCell
         let person = people[indexPath.row]
