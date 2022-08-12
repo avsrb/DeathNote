@@ -71,9 +71,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//        print(#function)
+//        tableView.reloadData()
+//    }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        100
@@ -97,5 +99,10 @@ extension ViewController: AddPersonViewControllerDelegate {
     func savePerson(person: Person) {
         people.append(person)
         print(people)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
+
+
