@@ -7,5 +7,4 @@ Learned:
 - UINavgationController, UINavigationBar, UINavigationItem
 - UITextField, UITextView, UIDatePicker
 
-<img src="demo.png" alt="demo.png" width="300"/>
-<img src="demo.png" alt="demo1.png" width="300"/>
+<img src="demo.png" alt="demo.png" width="300"/> <img src="demo.png" alt="demo1.png" width="300"/>
