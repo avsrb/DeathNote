@@ -13,7 +13,6 @@
 		ACBA340B28A3E403009A81F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA340A28A3E403009A81F6 /* ViewController.swift */; };
 		ACBA341028A3E408009A81F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBA340F28A3E408009A81F6 /* Assets.xcassets */; };
 		ACBA341328A3E408009A81F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBA341128A3E408009A81F6 /* LaunchScreen.storyboard */; };
-		ACBA341E28A3ED95009A81F6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA341D28A3ED95009A81F6 /* TableViewController.swift */; };
 		ACBA342028A40BDE009A81F6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */; };
 		ACF179C828A4FCF5009B6C4D /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF179C728A4FCF5009B6C4D /* AddPersonViewController.swift */; };
 		ACF179CC28A54BD1009B6C4D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF179CB28A54BD1009B6C4D /* Person.swift */; };
@@ -28,7 +27,6 @@
 		ACBA340F28A3E408009A81F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBA341228A3E408009A81F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACBA341428A3E408009A81F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACBA341D28A3ED95009A81F6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		ACF179C728A4FCF5009B6C4D /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		ACF179CB28A54BD1009B6C4D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -45,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC1E8D9828B5FB7A00B71858 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				AC77128828A4264A00593630 /* Extention+UILabel.swift */,
+				ACABFE5D28A6646B0011653E /* Extention+Date.swift */,
+			);
+			name = Extention;
+			sourceTree = "<group>";
+		};
 		ACBA33FA28A3E403009A81F6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +71,11 @@
 		ACBA340528A3E403009A81F6 /* Death Note */ = {
 			isa = PBXGroup;
 			children = (
+				AC1E8D9828B5FB7A00B71858 /* Extention */,
 				ACBA341B28A3E7B3009A81F6 /* Application */,
 				ACBA341C28A3E7D9009A81F6 /* Controllers */,
 				ACBA341A28A3E79A009A81F6 /* Resources */,
 				ACBA341F28A40BDE009A81F6 /* TableViewCell.swift */,
-				AC77128828A4264A00593630 /* Extention+UILabel.swift */,
-				ACABFE5D28A6646B0011653E /* Extention+Date.swift */,
 				ACF179CB28A54BD1009B6C4D /* Person.swift */,
 			);
 			path = "Death Note";
@@ -97,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				ACBA340A28A3E403009A81F6 /* ViewController.swift */,
-				ACBA341D28A3ED95009A81F6 /* TableViewController.swift */,
 				ACF179C728A4FCF5009B6C4D /* AddPersonViewController.swift */,
 			);
 			path = Controllers;
@@ -178,7 +183,6 @@
 				ACF179C828A4FCF5009B6C4D /* AddPersonViewController.swift in Sources */,
 				ACBA342028A40BDE009A81F6 /* TableViewCell.swift in Sources */,
 				ACF179CC28A54BD1009B6C4D /* Person.swift in Sources */,
-				ACBA341E28A3ED95009A81F6 /* TableViewController.swift in Sources */,
 				ACABFE5E28A6646B0011653E /* Extention+Date.swift in Sources */,
 				ACBA340728A3E403009A81F6 /* AppDelegate.swift in Sources */,
 			);

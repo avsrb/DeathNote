@@ -11,11 +11,7 @@ class ViewController: UIViewController {
 
     private let tableView: UITableView = {
         let tableView = UITableView()
-        // убрать отягивание
-        //tableView.bounces = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-//        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.estimatedRowHeight = 100.0
         return tableView
     }()
     
@@ -50,13 +46,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.count
     }
-    
-//    func cofigure(with row: Person) {
-//        name.text = person.name
-//        date.text = person.date
-//        reason.text = person.descriptionDead
-//    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! TableViewCell
         let person = people[indexPath.row]
@@ -65,21 +55,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.date.text = person.date
         cell.reason.text = person.descriptionDead
         
-//      DispatchQueue.main.async {
-//          self.tableView.reloadData()
-//       }
         return cell
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//
-//        print(#function)
-//        tableView.reloadData()
-//    }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        100
-//    }
 }
 
 extension ViewController {

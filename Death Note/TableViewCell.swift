@@ -6,12 +6,6 @@
 //
 
 import UIKit
-//    let dateDead: UIDatePicker = {
-//        let datePicker = UIDatePicker()
-//        datePicker.datePickerMode = .dateAndTime
-//        datePicker.setDate(.now, animated: true)
-//        return datePicker
-//    }()
 
 class TableViewCell: UITableViewCell {
     
@@ -48,18 +42,10 @@ class TableViewCell: UITableViewCell {
         reason.numberOfLines = 0
         name.numberOfLines = 1
     }
-//    override func prepareForReuse() {
-//        setConctrains()
-//    }
-//
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//   из-за это была какая херь
-//    override func layoutSubviews() {
-//        setConctrains()
-//    }
     
     func setConctrains() {
         horizontalStackView.addArrangedSubview(name)

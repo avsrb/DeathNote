@@ -11,15 +11,10 @@ extension UILabel {
     convenience init(font: UIFont, textAlignment: NSTextAlignment = .left) {
         self.init()
         
-//        self.text = text
         self.textColor = .black
         self.font = font
         self.textAlignment = textAlignment
-//        self.adjustsFontSizeToFitWidth = true()
         self.translatesAutoresizingMaskIntoConstraints = false
-//        self.adjustsFontSizeToFitWidth = true
-
-//        self.backgroundColor = .orange
     }
 }
 
